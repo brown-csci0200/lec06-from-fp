@@ -45,4 +45,83 @@ public class AnimalsTest {
         Assert.assertEquals(false, medDillo.canShelter());
     }
 
+    /**
+     * An example for updating fields--for more info, see the paper notes
+     */
+    @Test
+    public void testUpdateFieldsExample() {
+        Boa boa1 = new Boa("slinky", 30, "apples");
+        Boa boa2 = new Boa("slim", 15, "bugs");
+
+        boa1.eats = "tofu";                    // Set boa1's eats field to "tofu"
+        boa2 = new Boa("slim", 30, "grass");   // Make a new object assigned to boa2
+
+        Boa boa3 = boa1;                      // Make boa3 refer to same object as boa1
+        boa3.eats = "donuts";                 // Set the eats field of that object to "donuts"
+
+        // What is boa1.eats???  Choices:  "apples" "tofu" "donuts"
+        // Think about it, then scroll down
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // It's "donuts"!  Why?  The names boa1 and boa3 refer to the same object in memory
+        // For more info, see handout notes for this lecture
+        Assert.assertEquals("donuts", boa1.eats);
+        Assert.assertEquals("donuts", boa3.eats);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

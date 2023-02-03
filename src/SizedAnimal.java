@@ -16,4 +16,6 @@ public abstract class SizedAnimal implements IAnimal {
     public boolean isLengthWithin(int low, int high) {
         return this.length >= low && this.length <= high;
     }
+
+
 }

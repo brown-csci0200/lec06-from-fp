@@ -1,7 +1,7 @@
 /**
  * Represents a Dillo
  */
-public class Dillo extends SizedAnimal{
+public class Dillo extends SizedAnimal {
     boolean isDead;
 
     public Dillo(int howLong, boolean isD) {
