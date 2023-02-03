@@ -5,10 +5,6 @@
  * directly.  This is important because it's not meaningful to create a
  * SizedAnimal object on its own, since it doesn't refer to one specific
  * type of animal that can live in our Zoo
- *
- * Note from after class:  We can make SizedAnimal implement IAnimal,
- * which means that all classes that extend SizedAnimal must include
- * all the methods in IAnimal
  */
 public abstract class SizedAnimal implements IAnimal {
     public int length;

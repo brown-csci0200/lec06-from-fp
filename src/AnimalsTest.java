@@ -18,7 +18,6 @@ public class AnimalsTest {
     // A new Zoo containing a Dillo and a Boa
     Zoo myZoo3 = new Zoo(otherDillo, new Boa("slinky", 20, "lettuce"));
 
-
     // ??? aaa = new SizedAnimal(12); // This is not meaningful!
 
     /**
