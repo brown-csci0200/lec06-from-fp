@@ -8,8 +8,10 @@ import org.junit.runners.MethodSorters;
 public class AnimalsTest {
 
     // example test data
-    Dillo babyDillo = new Dillo(5,false);
-    Dillo otherDillo = new Dillo(100, true);
+    Dillo babyDillo = new Dillo(5,false);          // Normal size
+    Dillo otherDillo = new Dillo(100, true);       // Non-normal size
+    Boa someBoa = new Boa("slinky", 30, "apples"); // Normal size
+    Boa otherBoa = new Boa("slim", 15, "bugs");    // Non-normal size
 
 
     Zoo myZoo = new Zoo(babyDillo, otherDillo);
@@ -17,8 +19,6 @@ public class AnimalsTest {
 
     // A new Zoo containing a Dillo and a Boa
     Zoo myZoo3 = new Zoo(otherDillo, new Boa("slinky", 20, "lettuce"));
-
-    // ??? aaa = new SizedAnimal(12); // This is not meaningful!
 
     /**
      * Example test method.
@@ -60,33 +60,6 @@ public class AnimalsTest {
         boa3.eats = "donuts";                 // Set the eats field of that object to "donuts"
 
         // What is boa1.eats???  Choices:  "apples" "tofu" "donuts"
-        // Think about it, then scroll down
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // It's "donuts"!  Why?  The names boa1 and boa3 refer to the same object in memory
         // For more info, see handout notes for this lecture
