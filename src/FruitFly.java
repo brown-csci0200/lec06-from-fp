@@ -17,4 +17,17 @@ public class FruitFly implements IAnimal {
     public boolean isNormalSize() {
         return true; // All fruit flies are of normal size
     }
+
+    /**
+     * Fruit Flies don't have a length, but the IAnimal
+     * interface requires them to have a getLength() method!
+     *
+     * Therefore, we can write one, but just return 0,
+     * since this isn't meaningful.
+     *
+     * @return the length (which is zero!)
+     */
+    public int getLength() {
+        return 0;
+    }
 }

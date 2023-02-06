@@ -20,6 +20,8 @@ public class AnimalsTest {
     // A new Zoo containing a Dillo and a Boa
     Zoo myZoo3 = new Zoo(otherDillo, new Boa("slinky", 20, "lettuce"));
 
+    Zoo myZoo4 = new Zoo();
+
     /**
      * Example test method.
      * Test methods must have @Test before the method
@@ -67,34 +69,17 @@ public class AnimalsTest {
         Assert.assertEquals("donuts", boa3.eats);
     }
 
+    /**
+     * Here's a test using our new animals list
+     */
+    @Test
+    public void testMakeBiggerZoo() {
+        Zoo someZoo = new Zoo();
+        someZoo.allAnimals.add(this.babyDillo);
+        someZoo.allAnimals.add(this.otherDillo);
+        someZoo.allAnimals.add(this.someBoa);
+        someZoo.allAnimals.add(this.otherBoa);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        Assert.assertEquals(2, someZoo.nonNormalCount());
+    }
 }
