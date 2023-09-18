@@ -1,6 +1,8 @@
+package src;
+
 public class Shark extends Fish {
 
-    String attacks;
+    public String attacks;
 
     public Shark(int len, double sal, String attacks) {
         super(len, sal); // Call Fish constructor

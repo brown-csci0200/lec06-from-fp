@@ -1,3 +1,5 @@
+package src;
+
 public class Zoo {
     public IAnimal animal1;
     public IAnimal animal2;

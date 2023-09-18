@@ -1,3 +1,4 @@
+package src;
 /**
  * Class that allows us to share code for animals with a size
  *

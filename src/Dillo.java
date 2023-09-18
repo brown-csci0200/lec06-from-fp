@@ -1,8 +1,9 @@
+package src;
 /**
  * Represents a Dillo
  */
 public class Dillo extends SizedAnimal {
-    boolean isDead;
+    public boolean isDead;
 
     public Dillo(int howLong, boolean isD) {
         super(howLong);
