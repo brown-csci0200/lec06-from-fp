@@ -1,3 +1,5 @@
+package src;
+
 /**
  * Represents a fruit fly, another animal for our Zoo
  */

@@ -1,3 +1,5 @@
+package src;
+
 public class Fish extends SizedAnimal {
 
     public double salinity;

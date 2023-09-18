@@ -1,8 +1,12 @@
+package test;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
+
+import src.*;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AnimalsTest {
@@ -33,7 +37,7 @@ public class AnimalsTest {
     }
     @Test
     public void testMakeDillo() {
-        Assert.assertEquals(5, babyDillo.length);
+        Assert.assertEquals(5, babyDillo.getLength());
     }
 
     @Test

@@ -1,3 +1,5 @@
+package src;
+
 public class Shark extends Fish {
 
     String attacks;
