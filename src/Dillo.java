@@ -4,6 +4,9 @@ package src;
  */
 public class Dillo extends SizedAnimal {
     public boolean isDead;
+    // "public"    - anyone else can access
+    // "private"   - only this current class can access
+    // "protected" - only this current class AND subclasses can access
 
     public Dillo(int howLong, boolean isD) {
         super(howLong);
@@ -14,7 +17,7 @@ public class Dillo extends SizedAnimal {
      * @return true if this Dillo could shelter a human
      */
     public boolean canShelter() {
-        return (this.length > 60) && (this.isDead);
+        return (this.getLength() > 60) && (this.isDead);
     }
 
     public boolean isNormalSize() {

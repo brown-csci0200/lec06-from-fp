@@ -10,4 +10,5 @@ public interface IAnimal {
      * @return true if this animal has a normal size
      */
     public boolean isNormalSize();
+    public int getLength();
 }

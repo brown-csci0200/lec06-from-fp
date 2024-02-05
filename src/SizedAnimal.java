@@ -8,7 +8,7 @@ package src;
  * type of animal that can live in our Zoo
  */
 public abstract class SizedAnimal implements IAnimal {
-    public int length;
+    private int length;
 
     public SizedAnimal(int len) {
         this.length = len;
@@ -18,5 +18,11 @@ public abstract class SizedAnimal implements IAnimal {
         return this.length >= low && this.length <= high;
     }
 
+    public int getLength() {
+        return this.length;
+    }
 
+//    public void setLength(int len) {
+//        this.length = len;
+//    }
 }

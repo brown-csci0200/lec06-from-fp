@@ -34,7 +34,7 @@ public class AnimalsTest {
     }
     @Test
     public void testMakeDillo() {
-        Assert.assertEquals(5, babyDillo.length);
+        Assert.assertEquals(5, babyDillo.getLength());
     }
 
     @Test
@@ -55,19 +55,33 @@ public class AnimalsTest {
     public void testUpdateFieldsExample() {
         Boa boa1 = new Boa("slinky", 30, "apples");
         Boa boa2 = new Boa("slim", 15, "bugs");
+        System.out.println(boa1.eats);  // Question 1 "apples"
+        System.out.println(boa2.eats);  // Question 2 "bugs"
 
-        boa1.eats = "tofu";                    // Set boa1's eats field to "tofu"
-        boa2 = new Boa("slim", 30, "grass");   // Make a new object assigned to boa2
+        boa1.eats = "tofu";
+        boa2 = new Boa("slim", 30, "grass");
+        System.out.println(boa1.eats);  // Question 3 "tofu"
+        System.out.println(boa2.eats);  // Question 4 "grass"
 
-        Boa boa3 = boa1;                      // Make boa3 refer to same object as boa1
-        boa3.eats = "donuts";                 // Set the eats field of that object to "donuts"
+        Boa boa3 = boa1;
+        boa3.eats = "donuts";
+        System.out.println(boa1.eats);  // Question 5 "donuts"
+        System.out.println(boa2.eats);  // Question 6 "grass"
+        System.out.println(boa3.eats);  // Question 7 "donuts"
+    }
 
-        // What is boa1.eats???  Choices:  "apples" "tofu" "donuts"
+    @Test
+    public void testListZoo() {
+        Zoo zoo1 = new Zoo(babyDillo, otherBoa);
+        Zoo zoo2 = new Zoo();
+    }
 
-        // It's "donuts"!  Why?  The names boa1 and boa3 refer to the same object in memory
-        // For more info, see handout notes for this lecture
-        Assert.assertEquals("donuts", boa1.eats);
-        Assert.assertEquals("donuts", boa3.eats);
+    @Test
+    public void reviveDillo() {
+        Dillo frankenstein = new Dillo(15, true);
+        // How would you change Dillo to prevent this from happening?
+        frankenstein.isDead = false;
+
     }
 
 
