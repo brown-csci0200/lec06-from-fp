@@ -34,6 +34,7 @@ public class AnimalsTest {
     }
     @Test
     public void testMakeDillo() {
+        // Broken now that "length" is private
         Assert.assertEquals(5, babyDillo.length);
     }
 
@@ -70,34 +71,37 @@ public class AnimalsTest {
         Assert.assertEquals("donuts", boa3.eats);
     }
 
+    @Test
+    public void testWarmup() {
+        Boa boa1 = new Boa("slinky", 30, "apples");
+        Boa boa2 = new Boa("slim", 15, "bugs");
+        System.out.println(boa1.eats);         // Question 1 - "apples"
+        System.out.println(boa2.eats);         // Question 2 - "bugs"
 
+        boa1.eats = "tofu";
+        boa2 = new Boa("slim", 30, "grass");
+        System.out.println(boa1.eats);         // Question 3 - "tofu"
+        System.out.println(boa2.eats);         // Question 4 - "grass"
 
+        Boa boa3 = boa1;
+        boa3.eats = "donuts";
+        System.out.println(boa1.eats);         // Question 5 - "donuts"
+        System.out.println(boa2.eats);         // Question 6 - "grass"
+        System.out.println(boa3.eats);         // Question 7 - "donuts"
+    }
 
+    @Test
+    public void testZooConst() {
+        Zoo zoo1 = new Zoo(babyDillo, otherBoa);
+        Zoo emptyZoo = new Zoo();
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @Test
+    public void testDilloLengthProtection() {
+        Dillo smolDillo = new Dillo(1, false);
+//        // Now both of these fields are private somewhere (Dillo.isDead, SizedAnimal.length)
+//        // So we can't modify them here in this test.
+//        smolDillo.length = 40;
+//        smolDillo.isDead = true;
+    }
 }

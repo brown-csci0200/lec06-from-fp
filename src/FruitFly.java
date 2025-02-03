@@ -18,4 +18,8 @@ public class FruitFly implements IAnimal {
     public boolean isNormalSize() {
         return true; // All fruit flies are of normal size
     }
+
+    public int getLength() {
+        return 0;
+    }
 }

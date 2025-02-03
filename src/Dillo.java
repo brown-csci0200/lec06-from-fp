@@ -3,7 +3,11 @@ package src;
  * Represents a Dillo
  */
 public class Dillo extends SizedAnimal {
-    public boolean isDead;
+    private boolean isDead;
+
+    // public  - "Anyone can access this field"
+    // private - "Only this class can access this field"
+    // protected - "Only this class AND its subclasses can access this field
 
     public Dillo(int howLong, boolean isD) {
         super(howLong);
@@ -14,7 +18,8 @@ public class Dillo extends SizedAnimal {
      * @return true if this Dillo could shelter a human
      */
     public boolean canShelter() {
-        return (this.length > 60) && (this.isDead);
+        this.setLength(30);
+        return (this.getLength() > 60) && (this.isDead);
     }
 
     public boolean isNormalSize() {

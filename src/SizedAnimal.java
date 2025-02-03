@@ -8,10 +8,23 @@ package src;
  * type of animal that can live in our Zoo
  */
 public abstract class SizedAnimal implements IAnimal {
-    public int length;
+    private int length;
 
     public SizedAnimal(int len) {
         this.length = len;
+    }
+
+    // ONLY MAKE GETTERS AND SETTERS WHEN YOU REALLY NEED THEM
+    // When we want other classes to be able to read the length,
+    // we create a "getter" method for it
+    public int getLength() {
+        return this.length;
+    }
+
+    // When we want other classes to be able to modify the length
+    // we create a "setter" method for it
+    public void setLength(int newLength) {
+        this.length = newLength;
     }
 
     public boolean isLengthWithin(int low, int high) {
