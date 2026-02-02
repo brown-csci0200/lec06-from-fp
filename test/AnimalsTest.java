@@ -33,7 +33,7 @@ public class AnimalsTest {
     @Test
     public void testExample() {
         // example syntax for assertEquals
-        Assert.assertEquals(1+1, 2);
+        Assert.assertEquals(2, 1 + 1);
     }
     @Test
     public void testMakeDillo() {
@@ -86,4 +86,36 @@ public class AnimalsTest {
 
         Assert.assertEquals(2, someZoo.nonNormalCount());
     }
+
+    @Test
+    public void testBoas() {
+        Boa boa1 = new Boa("slinky", 20, "apples");
+        Boa boa2 = new Boa("slinky", 20, "apples");
+
+        // Are boa1 and boa2 equal????
+        if (boa1 == boa2) { // "pointer equality" => checks if names point to the same object (No)
+            // this would not be true here
+        }
+
+        Boa boa3 = boa1; // boa3 points to same object as boa1
+        if (boa1 == boa3) {
+            // this would be true!
+        }
+
+        // Sometimes we want STRUCTURAL EQUALITY => "are all the fields equal???"
+        // Java provides a standard interface for a metnod equals(), which is
+        // designed to check this.  In general, when making a class, you're responsible
+        // for writing a .equals method that does the check.
+        // We'll talk about how these methods in later lectures, but the point is to know
+        // when to check with pointer equality vs. structural equality.
+        //
+        // If you want to make your own equals method in IntelliJ, open up Boa class
+        // and then go to Code > Generate... > equals() and hashcode()
+        // then, click "Next" to accept all the default values
+        if (boa1.equals(boa2)) {
+            // Compares based on fields (if implementation provided)
+        }
+    }
+
 }
+
