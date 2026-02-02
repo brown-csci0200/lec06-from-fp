@@ -3,18 +3,18 @@ package src;
  * Represents a Dillo
  */
 public class Dillo extends SizedAnimal {
-    public boolean isDead;
+    public boolean isExtinct;
 
-    public Dillo(int howLong, boolean isD) {
+    public Dillo(int howLong, boolean isE) {
         super(howLong);
-        this.isDead = isD;
+        this.isExtinct = isE;
     }
 
     /**
      * @return true if this Dillo could shelter a human
      */
     public boolean canShelter() {
-        return (this.length > 60) && (this.isDead);
+        return (this.length > 60) && (this.isExtinct);
     }
 
     public boolean isNormalSize() {
